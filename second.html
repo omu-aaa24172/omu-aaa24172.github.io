@@ -5,19 +5,12 @@
    
 </head>
 <body>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ラジオボタンに2つ追加 -->
-<input id="multiply" type="radio" name="cal0" value="*">
-<label for="multiply">掛ける</label>
-<input id="divide" type="radio" name="cal0" value="/">
-<label for="divide">割る</label>
-
-<!-- ボタンのonclick属性を修正 -->
-<button onclick="result0.value = 
-    (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
-    (cal0[1].checked)? Number(num01.value) - Number(num02.value) :
-    (cal0[2].checked)? Number(num01.value) * Number(num02.value) :
-    (cal0[3].checked)? Number(num01.value) / Number(num02.value) : NaN">計算</button>
+<h2>BMI指標計算</h2>
+<form oninput="bmi.value = Math.round(Number(weight.value) / Math.pow(Number(height.value)/100, 2) * 10) / 10">
+    <p><label>体重(kg)：<input name="weight" type="number" step="any"></label></p>
+    <p><label>身長(cm)：<input name="height" type="number" step="any"></label></p>
+    <p><label>BMI：<output name="bmi"></output></label></p>
+</form>
         <h2>🔗 課題2: おすすめの旅行先</h2>
             <li>北海道</li>
         <a href="index.html">好きな食べ物へのリンク</a> 
